@@ -29,7 +29,9 @@ app.get('/',(request, response)=>{
             response.render('index.ejs', { items: todoItems, left: itemsLeft })
         })
     })
-    .catch(error => console.error(error))
+    .catch(error) {
+        console.error(error)
+    }
 })
 
 app.post('/addTodo', (request, response) => {
@@ -38,7 +40,9 @@ app.post('/addTodo', (request, response) => {
         console.log('Todo Added')
         response.redirect('/')
     })
-    .catch(error => console.error(error))
+    .catch(error) {
+        console.error(error)
+    }
 })
 
 app.put('/markComplete', (request, response) => {
@@ -54,7 +58,9 @@ app.put('/markComplete', (request, response) => {
         console.log('Marked Complete')
         response.json('Marked Complete')
     })
-    .catch(error => console.error(error))
+    .catch(error) {
+        console.error(error)
+    }
 })
 
 app.put('/markUncomplete', (request, response) => {
@@ -70,7 +76,9 @@ app.put('/markUncomplete', (request, response) => {
         console.log('Marked Uncomplete')
         response.json('Marked Uncomplete')
     })
-    .catch(error => console.error(error))
+    .catch(error) {
+        console.error(error)
+    }
 })
 
 app.put('/markImportant', (request, response) => {
@@ -87,7 +95,9 @@ app.put('/markImportant', (request, response) => {
         console.log('Marked Important')
         response.json('Marked Important')
     })
-    .catch(error => console.error(error))
+    .catch(error) {
+        console.error(error)
+    }
 })
 
 app.put('/markUnimportant', (request, response) => {
@@ -104,7 +114,9 @@ app.put('/markUnimportant', (request, response) => {
         console.log('Marked Unimportant')
         response.json('Marked Unimportant')
     })
-    .catch(error => console.error(error))
+    .catch(error) {
+        console.error(error)
+    }
 })
 
 app.delete('/deleteTodo', (request, response) => {
@@ -113,7 +125,9 @@ app.delete('/deleteTodo', (request, response) => {
         console.log('Todo Deleted')
         response.json('Todo Deleted')
     })
-    .catch(error => console.error(error))
+    .catch(error) {
+        console.error(error)
+    }
 
 })
 
